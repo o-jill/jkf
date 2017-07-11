@@ -90,7 +90,9 @@ module Jkf::Converter
     end
 
     def convert_time(time)
-      sec = time["now"]["m"] * 60 + time["now"]["s"]
+      return "T0\n" if time.nil?
+      sec = time["now"]["h"].nil? ? 0 : time["now"]["h"]*3_600
+      sec += time["now"]["m"] * 60 + time["now"]["s"]
       "T#{sec}\n"
     end
 
