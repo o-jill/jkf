@@ -104,11 +104,11 @@ module Jkf::Converter
     end
 
     def convert_piece_with_pos(move)
-      result = if move["to"]
-                 n2zen(move["to"]["x"]) + n2kan(move["to"]["y"])
-               elsif move["same"]
-                 "同　"
-               end
+      result =  if move["same"]
+                  "同　"
+                elsif move["to"]
+                  n2zen(move["to"]["x"]) + n2kan(move["to"]["y"])
+                end
       result += csa2kind(move["piece"])
       result += "成" if move["promote"]
       result
