@@ -84,7 +84,9 @@ module Jkf::Converter
     def convert_time(time)
       now = [time["now"]["m"], time["now"]["s"]]
       now[0] += time["now"]["h"].to_i*60 if time["now"]["h"]
-      total = [(time["total"]["h"] || 0), time["total"]["m"], time["now"]["s"]]
+      total = [
+        (time["total"]["h"] || 0), time["total"]["m"], time["total"]["s"]
+      ]
       "(%2d:%02d/%02d:%02d:%02d)" % [
         now[0], now[1], total[0], total[1], total[2]
       ]
