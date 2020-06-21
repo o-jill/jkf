@@ -95,6 +95,7 @@ module Jkf::Converter
                   when "CHUDAN" then "で中断"
                   when "JISHOGI" then "で持将棋"
                   when "SENNICHITE" then "で千日手"
+                  when "HIKIWAKE" then "で引き分け"
                   when "TSUMI" then "で詰み"
                   when "FUZUMI" then "で不詰"
                   end

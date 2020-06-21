@@ -103,6 +103,7 @@ module Jkf::Converter
       when "TIME_UP" then "切れ負け"
       when "ILLEGAL_ACTION" then "反則勝ち"
       when "ILLEGAL_MOVE" then "反則負け"
+      when "HIKIWAKE" then "引き分け"
       end
     end
 
